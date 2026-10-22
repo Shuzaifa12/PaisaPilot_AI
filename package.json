@@ -1,0 +1,23 @@
+{
+  "name": "agentathon-starter",
+  "version": "0.1.0",
+  "description": "Meterless hackathon starter: a research notebook agent with real H-MEM memory. Zero API keys required.",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "setup": "npx --yes degit meterless/meterless/engines/hmem/reference vendor/hmem && cd vendor/hmem && npm install --no-audit --no-fund",
+    "notebook": "tsx notebook.ts",
+    "dev": "bun run --cwd frontend dev",
+    "build": "bun run --cwd frontend build",
+    "start": "bun run --cwd frontend start",
+    "lint": "bun run --cwd frontend lint"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  },
+  "dependencies": {
+    "frontend": "^2.0.0-alpha.4",
+    "lucide-react": "^1.61.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "PaisaPilot AI & H-MEM Notebook",
+  "description": "Deterministic cash-flow forecasting and hierarchical memory research notebook agent.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

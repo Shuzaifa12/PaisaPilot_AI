@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.coverage
+.notebook/
+.next/
+out/
+dist/
+build/
+.env
+.env.*
+!.env.example
+!.env.*.example
