@@ -13,3 +13,6 @@ build/
 .env.*
 !.env.example
 !.env.*.example
+.notebook-agent/
+*.before_hmem
+*.before_hmem*

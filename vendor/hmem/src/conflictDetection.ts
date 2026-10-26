@@ -2,12 +2,12 @@
 // is marked supersededBy (kept, penalized in ranking), never deleted.
 // Auto-resolve only at decision confidence >= 0.70; everything else queues.
 
-import { DEFAULTS, clamp01 } from "./types.ts";
-import type { ConflictRecord, MemoryRecord } from "./types.ts";
-import { cosine } from "./embeddings.ts";
-import type { MemoryStoreService } from "./memoryStore.ts";
-import { snapshot } from "./memoryStore.ts";
-import type { TrustLedgerService } from "./trustLedger.ts";
+import { DEFAULTS, clamp01 } from "./types";
+import type { ConflictRecord, MemoryRecord } from "./types";
+import { cosine } from "./embeddings";
+import type { MemoryStoreService } from "./memoryStore";
+import { snapshot } from "./memoryStore";
+import type { TrustLedgerService } from "./trustLedger";
 
 const OPPOSING_PAIRS: [RegExp, RegExp][] = [
   [/\balways\b/i, /\bnever\b/i],

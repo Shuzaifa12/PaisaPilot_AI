@@ -3,11 +3,11 @@
 // first and exposes restore(). Guardrails: superseding/current records,
 // derived/synthesized memories, and relationship hubs are NEVER archived.
 
-import { DAY_MS, DEFAULTS } from "./types.ts";
-import type { MemoryRecord, SleepPreview, SleepReport } from "./types.ts";
-import { cosine } from "./embeddings.ts";
-import type { MemoryStoreService } from "./memoryStore.ts";
-import type { TrustLedgerService } from "./trustLedger.ts";
+import { DAY_MS, DEFAULTS } from "./types";
+import type { MemoryRecord, SleepPreview, SleepReport } from "./types";
+import { cosine } from "./embeddings";
+import type { MemoryStoreService } from "./memoryStore";
+import type { TrustLedgerService } from "./trustLedger";
 
 const HUB_THRESHOLD = 3;
 

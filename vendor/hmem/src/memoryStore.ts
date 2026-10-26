@@ -5,10 +5,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { DEFAULTS, clamp01 } from "./types.ts";
-import type { MemoryLayer, MemoryRecord, MemoryType, Provenance } from "./types.ts";
-import { cosine, embed, tokenize } from "./embeddings.ts";
-import type { TrustLedgerService } from "./trustLedger.ts";
+import { DEFAULTS, clamp01 } from "./types";
+import type { MemoryLayer, MemoryRecord, MemoryType, Provenance } from "./types";
+import { cosine, embed, tokenize } from "./embeddings";
+import type { TrustLedgerService } from "./trustLedger";
 
 const TECH_TERMS = [
   "react", "python", "typescript", "javascript", "rust", "sqlite", "postgres", "indexeddb",

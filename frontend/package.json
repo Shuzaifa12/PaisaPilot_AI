@@ -3,26 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "test": "vitest run"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.13.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "lucide-react": "^1.61.0",
     "next": "15.5.28",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-is": "^19.3.1",
     "recharts": "^3.10.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@eslint/eslintrc": "^3.3.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.28",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "eslint": "^10.13.0",
+    "eslint-config-next": "^16.4.3",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
   }
 }

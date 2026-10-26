@@ -4,7 +4,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import type { LedgerAction, LedgerEntry, MemoryRecord } from "./types.ts";
+import type { LedgerAction, LedgerEntry, MemoryRecord } from "./types";
 
 export class TrustLedgerService {
   private entries: LedgerEntry[] = [];

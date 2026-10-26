@@ -4,8 +4,8 @@
 // and returns a strict JSON array of memory strings; its output is parsed
 // robustly (markdown fences stripped, format noise tolerated).
 
-import type { MemoryLayer, MemoryType, MiningEventType, MemoryRecord } from "./types.ts";
-import type { MemoryStoreService } from "./memoryStore.ts";
+import type { MemoryLayer, MemoryType, MiningEventType, MemoryRecord } from "./types";
+import type { MemoryStoreService } from "./memoryStore";
 
 const EVENT_TYPE_MAP: Record<MiningEventType, MemoryType> = {
   chat_message: "general",

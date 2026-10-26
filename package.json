@@ -8,16 +8,18 @@
   "scripts": {
     "setup": "npx --yes degit meterless/meterless/engines/hmem/reference vendor/hmem && cd vendor/hmem && npm install --no-audit --no-fund",
     "notebook": "tsx notebook.ts",
-    "dev": "bun run --cwd frontend dev",
-    "build": "bun run --cwd frontend build",
-    "start": "bun run --cwd frontend start",
-    "lint": "bun run --cwd frontend lint"
+    "dev": "(python3 -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --app-dir backend &) && npm --prefix frontend run dev -- -p 3000",
+    "build": "NODE_ENV=production npm --prefix frontend run build",
+    "start": "npm --prefix frontend run start -- -p 3000",
+    "lint": "bun run --cwd frontend lint",
+    "test:frontend": "npm --prefix frontend test",
+    "test:hmem": "npm --prefix vendor/hmem test",
+    "test": "npm --prefix frontend test && npm --prefix vendor/hmem test"
   },
   "devDependencies": {
     "tsx": "^4.23.15"
   },
   "dependencies": {
-    "frontend": "^2.0.0-alpha.4",
     "lucide-react": "^1.61.0"
   }
 }

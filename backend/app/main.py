@@ -1,4 +1,11 @@
-from fastapi import FastAPI
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+from fastapi import FastAPI, Header
+
+# Load .env file from root or backend directory if present
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
 
 from app.forecast import build_forecast
 from app.models import ForecastRequest, ForecastResponse
@@ -34,8 +41,17 @@ def create_forecast(payload: ForecastRequest) -> ForecastResponse:
 
 
 @app.post("/agent/explain")
-async def agent_explain(payload: ForecastResponse) -> dict:
+async def agent_explain(
+    payload: ForecastResponse,
+    memory_context: str = Header(default="", alias="X-PaisaPilot-Memory-Context"),
+) -> dict:
     data = payload.model_dump(mode="json")
-    result = await explain_forecast_with_nemotron(data)
-    return result
 
+    # Bound the optional context and keep forecast validation unchanged.
+    safe_memory_context = memory_context[:3000] if memory_context else ""
+
+    result = await explain_forecast_with_nemotron(
+        data,
+        memory_context=safe_memory_context,
+    )
+    return result

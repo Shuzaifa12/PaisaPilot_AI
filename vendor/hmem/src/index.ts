@@ -2,25 +2,25 @@
 // dependencies, in-memory with optional JSON persistence. This is the
 // minimal runnable expression of AGENTS.md, not a production library.
 
-import type { FeedbackKind, HMEMOptions, MemoryRecord, MiningEventType, QueryResult } from "./types.ts";
-import type { AddInput } from "./memoryStore.ts";
-import { MemoryStoreService } from "./memoryStore.ts";
-import { TrustLedgerService } from "./trustLedger.ts";
-import { MemoryMiningService } from "./memoryMining.ts";
-import { MemoryRetrievalService } from "./memoryRetrieval.ts";
-import { ConflictDetectionService } from "./conflictDetection.ts";
-import { SleepCycleService } from "./sleepCycle.ts";
-import { DreamingService } from "./dreaming.ts";
+import type { FeedbackKind, HMEMOptions, MemoryRecord, MiningEventType, QueryResult } from "./types";
+import type { AddInput } from "./memoryStore";
+import { MemoryStoreService } from "./memoryStore";
+import { TrustLedgerService } from "./trustLedger";
+import { MemoryMiningService } from "./memoryMining";
+import { MemoryRetrievalService } from "./memoryRetrieval";
+import { ConflictDetectionService } from "./conflictDetection";
+import { SleepCycleService } from "./sleepCycle";
+import { DreamingService } from "./dreaming";
 
-export * from "./types.ts";
-export { MemoryStoreService } from "./memoryStore.ts";
-export { TrustLedgerService } from "./trustLedger.ts";
-export { MemoryMiningService, parseStrictJsonArray } from "./memoryMining.ts";
-export { MemoryRetrievalService } from "./memoryRetrieval.ts";
-export { ConflictDetectionService } from "./conflictDetection.ts";
-export { SleepCycleService } from "./sleepCycle.ts";
-export { DreamingService } from "./dreaming.ts";
-export { embed, cosine, tokenize, jaccard } from "./embeddings.ts";
+export * from "./types";
+export { MemoryStoreService } from "./memoryStore";
+export { TrustLedgerService } from "./trustLedger";
+export { MemoryMiningService, parseStrictJsonArray } from "./memoryMining";
+export { MemoryRetrievalService } from "./memoryRetrieval";
+export { ConflictDetectionService } from "./conflictDetection";
+export { SleepCycleService } from "./sleepCycle";
+export { DreamingService } from "./dreaming";
+export { embed, cosine, tokenize, jaccard } from "./embeddings";
 
 export class HMEM {
   readonly ledger: TrustLedgerService;

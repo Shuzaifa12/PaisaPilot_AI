@@ -5,7 +5,7 @@
 
 import { NextResponse } from "next/server";
 import path from "node:path";
-import { HMEM } from "../../../../../../vendor/hmem/src/index.ts";
+import { HMEM } from "../../../../../../vendor/hmem/src/index";
 
 // Isolated agent memory persist directory at root
 const persistDir = path.resolve(process.cwd(), "..", ".notebook-agent");

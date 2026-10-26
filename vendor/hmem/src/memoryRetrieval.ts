@@ -10,14 +10,14 @@
 // superseded records are penalized, never deleted or filtered.
 // Threshold 0.35 applies to the FINAL score; top N = 5.
 
-import { DAY_MS, DEFAULTS, clamp01 } from "./types.ts";
-import type { MemoryRecord, QueryResult, RetrievedMemory } from "./types.ts";
-import { cosine, embed, jaccard, tokenize } from "./embeddings.ts";
-import type { MemoryStoreService } from "./memoryStore.ts";
-import type { TrustLedgerService } from "./trustLedger.ts";
-import { FEEDBACK_DELTAS } from "./types.ts";
-import type { FeedbackKind } from "./types.ts";
-import { snapshot } from "./memoryStore.ts";
+import { DAY_MS, DEFAULTS, clamp01 } from "./types";
+import type { MemoryRecord, QueryResult, RetrievedMemory } from "./types";
+import { cosine, embed, jaccard, tokenize } from "./embeddings";
+import type { MemoryStoreService } from "./memoryStore";
+import type { TrustLedgerService } from "./trustLedger";
+import { FEEDBACK_DELTAS } from "./types";
+import type { FeedbackKind } from "./types";
+import { snapshot } from "./memoryStore";
 
 const LAYER_WEIGHT: Record<MemoryRecord["layer"], number> = {
   long_term: 1.0,

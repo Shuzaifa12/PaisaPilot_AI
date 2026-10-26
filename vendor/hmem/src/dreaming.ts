@@ -2,11 +2,11 @@
 // approval boundary. Proposals are NEVER auto-materialized; only approve()
 // turns one into durable memory, with derivedFrom lineage.
 
-import { DEFAULTS } from "./types.ts";
-import type { DreamProposal, MemoryRecord } from "./types.ts";
-import { cosine, jaccard } from "./embeddings.ts";
-import type { MemoryStoreService } from "./memoryStore.ts";
-import type { TrustLedgerService } from "./trustLedger.ts";
+import { DEFAULTS } from "./types";
+import type { DreamProposal, MemoryRecord } from "./types";
+import { cosine, jaccard } from "./embeddings";
+import type { MemoryStoreService } from "./memoryStore";
+import type { TrustLedgerService } from "./trustLedger";
 
 export class DreamingService {
   private proposals = new Map<string, DreamProposal>();
