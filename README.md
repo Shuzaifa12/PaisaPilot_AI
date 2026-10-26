@@ -116,7 +116,7 @@ cp backend/.env.example backend/.env
 
 To run the complete system, start the backend and frontend in two separate terminals:
 
-### Terminal 1: Python FastAPI Backend (Port 8000)
+### Terminal 1: Python FastAPI Backend (Port 8001)
 
 **On macOS / Linux:**
 ```bash
@@ -124,7 +124,7 @@ cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 ```
 
 **On Windows (PowerShell):**
@@ -133,10 +133,10 @@ cd backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 ```
 
-Verify backend health: [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health) (or interactive API docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)).
+Verify backend health: [http://127.0.0.1:8001/health](http://127.0.0.1:8001/health) (or interactive API docs at [http://127.0.0.1:8001/docs](http://127.0.0.1:8001/docs)).
 
 ### Terminal 2: Next.js Frontend (Port 3000)
 
